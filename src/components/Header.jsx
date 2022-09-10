@@ -59,7 +59,7 @@ export default function Header() {
         ) : null}
         <div className="header__content__button">
           <Link
-            to="/quote"
+            to="/talk"
             onClick={() => {
               document
                 .getElementsByName("header__content__nav__entry")

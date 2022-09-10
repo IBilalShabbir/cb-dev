@@ -1,6 +1,7 @@
-import "./App.css";
+import "./App.scss";
 import Header from "./components/Header";
 import Home from "./screen/Home";
+import "custom-cursor-react/dist/index.css";
 
 function App() {
   return (
