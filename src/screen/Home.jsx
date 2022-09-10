@@ -1,18 +1,8 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 import bg3 from "../video/bg3.mp4";
 import CustomCursor from "custom-cursor-react";
 
-AOS.init({});
-
 export default function Home() {
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      AOS.init({ duration: 2000 });
-    });
-  });
-
   return (
     <div className="homepage__container">
       <div className="homepage__container__wrapper__background">
@@ -41,10 +31,7 @@ export default function Home() {
               ital
             </div>
           </div>
-          <div
-            className="homepage__container__wrapper__entry__second"
-            data-aos="fade-left"
-          >
+          <div className="homepage__container__wrapper__entry__second">
             <div className="homepage__container__wrapper__entry__content">
               DESIGN
             </div>
@@ -57,10 +44,7 @@ export default function Home() {
             </div>
           </div>
           <div className="homepage__container__wrapper__entry">
-            <div
-              className="homepage__container__wrapper__entry__content"
-              data-aos="fade-right"
-            >
+            <div className="homepage__container__wrapper__entry__content">
               company
             </div>
           </div>
