@@ -361,6 +361,59 @@ body {
   margin: 0;
   padding: 0;
 }
+.banner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0da34e;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes banner_animation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    border-radius: 50%;
+  }
+  25% {
+    transform: scale(0.8);
+    opacity: 0.8;
+    border-radius: 50%;
+  }
+  50% {
+    transform: scale(0.6);
+    opacity: 0.6;
+    border-radius: 50%;
+  }
+  75% {
+    transform: scale(0.4);
+    opacity: 0.4;
+    border-radius: 50%;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+.banner__heading {
+  font-weight: bold;
+  font-size: 100px;
+}
+.banner__top {
+  margin-right: 5em;
+}
+.banner__middle {
+  margin-left: 15em;
+  font-size: 50px;
+}
+.banner__bottom {
+  margin-left: 3em;
+}
 @media (any-pointer: fine) {
   ._12c4J {
     position: fixed;
