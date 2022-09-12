@@ -1,15 +1,18 @@
 import "./App.scss";
+import React, { Suspense } from "react";
 import Header from "./components/Header";
 import Banner from "./screen/Banner";
 import Home from "./screen/Home";
+import { Route, Routes } from "react-router";
 
 function App() {
   return (
-    <div className="App">
-      <Banner />
+    <Suspense fallback={<Banner style={{ height: "100vh" }} />}>
       <Header />
-      <Home />
-    </div>
+      <Routes maxLoadingTime={500}>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Suspense>
   );
 }
 

@@ -18,6 +18,7 @@ export default function Home() {
       }
     });
   }, [window.scrollY]);
+
   return (
     <div className="homepage__container">
       <div className="homepage__container__wrapper__background">
@@ -80,30 +81,55 @@ export default function Home() {
       </div>
       <div className="more__about__us__section">
         <div className="more__about__us__section___container">
-          <div className="more__about__us__section__left">
-            <button>
-              About Us
-              <img
-                src="https://assets.website-files.com/5ff17468919ea6609324630f/5ff1975e823a56d0bd715246_cta-ico_white.svg"
-                alt=""
-              />
-            </button>
-          </div>
+          <Fade left cascade>
+            {" "}
+            <div className="more__about__us__section__left">
+              {" "}
+              <button>
+                About Us
+                <img
+                  src="https://assets.website-files.com/5ff17468919ea6609324630f/5ff1975e823a56d0bd715246_cta-ico_white.svg"
+                  alt=""
+                  className="more__about__us__section__left__button__img"
+                />
+              </button>
+            </div>
+          </Fade>
           <div className="more__about__us__section__right">
             <div className="more__about__us__section__right__content">
-              <div className="more__about__us__section__right__content__entry">
+              <span className="more__about__us__section__right__content__entry">
                 Agency{" "}
-              </div>
-              <p>
-                {" "}
+              </span>{" "}
+              <span className="more__about__us__section__right__content__entry__last">
                 We're a team of UX strategists, UI/UX, Product & Motion
-                designers, and business analysts, working closely to capture
-                untapped business opportunities.
-              </p>
+              </span>
+              designers,and business analysts, working closely to capture
+              untapped business opportunities.
             </div>
           </div>
         </div>
       </div>
+      <div className="our__past__projects">
+        <div className="our__past__projects__container">
+          <Fade bottom>
+            <div className="our__past__projects__container__top">OUR PAST</div>
+          </Fade>
+          <div className="our__past__projects__container__bottom">
+            <Fade bottom>
+              <div className="our__past__projects__container__top">
+                PROJECTS
+              </div>
+            </Fade>
+            <div className="our__past__projects__container__bottom__right">
+              <Fade bottom>500+ PROJECTS</Fade>
+              <Fade right>
+                <div className="our__past__projects__container__bottom__right__line"></div>
+              </Fade>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div></div>
     </div>
   );
 }

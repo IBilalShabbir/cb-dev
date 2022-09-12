@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import AnimatedText from "react-animated-text-content";
 export default function Banner() {
-  const [show, setShow] = useState(0);
-  const array = ["hello1", "hello2", "world1", "world2"];
+  const [show, setShow] = useState(true);
+  const array = ["to", "Crazy", "Biengs"];
   useEffect(() => {
     document.body.style.overflow = "hidden";
 
@@ -13,16 +13,16 @@ export default function Banner() {
   useEffect(() => {
     setTimeout(() => {
       setShow(show + 1 < array.length ? show + 1 : 0);
-    }, 1200);
+    }, 1500);
   }, [show]);
 
   return (
     <div
       className="banner"
-      style={{ animation: show === 2 ? "banner_animation 500ms" : "" }}
+      style={{ animation: show === 2 ? "banner_animation 800ms" : "" }}
     >
       <div className="banner__heading">
-        <div className="banner__top">PRODUCT</div>
+        <div className="banner__top">Welcome</div>
 
         <div className="banner__middle">
           {array
@@ -36,14 +36,14 @@ export default function Banner() {
                 animation={{
                   x: "0px",
                   ease: "ease",
-                  scale: 1,
+                  scale: 3,
                 }}
               >
                 {item}
               </AnimatedText>
             ))}
         </div>
-        <div className="banner__bottom">PRODUCT</div>
+        <div className="banner__bottom">Software House</div>
       </div>
     </div>
   );
