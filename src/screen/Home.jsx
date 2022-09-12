@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import bg3 from "../video/bg3.mp4";
+import cardimg1 from "../video/cardimg1.mp4";
 import { Fade } from "react-reveal";
+import AboutUsButton from "../components/AboutUSButton";
 
 export default function Home() {
   const [isBackToTop, setIsBackToTop] = useState(false);
@@ -81,20 +83,8 @@ export default function Home() {
       </div>
       <div className="more__about__us__section">
         <div className="more__about__us__section___container">
-          <Fade left cascade>
-            {" "}
-            <div className="more__about__us__section__left">
-              {" "}
-              <button>
-                About Us
-                <img
-                  src="https://assets.website-files.com/5ff17468919ea6609324630f/5ff1975e823a56d0bd715246_cta-ico_white.svg"
-                  alt=""
-                  className="more__about__us__section__left__button__img"
-                />
-              </button>
-            </div>
-          </Fade>
+          <AboutUsButton text="About Us" />
+
           <div className="more__about__us__section__right">
             <div className="more__about__us__section__right__content">
               <span className="more__about__us__section__right__content__entry">
@@ -129,7 +119,66 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div></div>
+      <div className="all__cases__cards__section">
+        <div className="all__cases__cards__section__container">
+          <div className="all__cases__cards__left__entry">
+            <button className="all__cases__cards__left__entry__button">
+              All Cases
+              <img
+                src="https://assets.website-files.com/5ff17468919ea6609324630f/5ff1975e823a56d0bd715246_cta-ico_white.svg"
+                alt=""
+                className="all__cases__cards__left__entry__button__img"
+              />
+            </button>
+          </div>
+          <div className="all__cases__cards__right__entry">
+            <div className="all__cases__cards__right__entry__data">
+              <div className="all__cases__cards__right__entry__data__first">
+                <div className="all__cases__cards__right__entry__data__first__text">
+                  Metastaq
+                </div>
+                <div>'22</div>
+              </div>
+              <div className="all__cases__cards__right__entry__data__first">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-arrow-up-right"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div className="all__cases__cards__right__entry__data">
+              <div className="all__cases__cards__right__entry__data__bottom__text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Molestiae ut, quia incidunt perferendis voluptatum officia culpa
+                similique distinctio esse dolorem.
+              </div>
+            </div>
+            <div>ITERFACE & WEBSITE</div>
+          </div>
+          <div className="all__cases__cards__right__entry__card__contant">
+            <video
+              autoPlay
+              loop
+              muted
+              width="100%"
+              className="all__cases__cards__right__entry__card__video"
+            >
+              <source src={cardimg1} type="video/mp4"></source>
+            </video>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
