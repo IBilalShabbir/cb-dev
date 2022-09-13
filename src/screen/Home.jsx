@@ -3,6 +3,7 @@ import bg3 from "../video/bg3.mp4";
 import cardimg1 from "../video/cardimg1.mp4";
 import { Fade } from "react-reveal";
 import AboutUsButton from "../components/AboutUSButton";
+import AllCasesCards from "../components/AllCasesCards";
 
 export default function Home() {
   const [isBackToTop, setIsBackToTop] = useState(false);
@@ -101,7 +102,7 @@ export default function Home() {
       </div>
       <div className="our__past__projects">
         <div className="our__past__projects__container">
-          <Fade bottom>
+          <Fade bottom fraction="0.5">
             <div className="our__past__projects__container__top">OUR PAST</div>
           </Fade>
           <div className="our__past__projects__container__bottom">
@@ -111,8 +112,10 @@ export default function Home() {
               </div>
             </Fade>
             <div className="our__past__projects__container__bottom__right">
-              <Fade bottom>500+ PROJECTS</Fade>
-              <Fade right>
+              <Fade bottom fraction="0.8" distance="40%">
+                500+ PROJECTS
+              </Fade>
+              <Fade right distance="10%">
                 <div className="our__past__projects__container__bottom__right__line"></div>
               </Fade>
             </div>
@@ -131,51 +134,13 @@ export default function Home() {
               />
             </button>
           </div>
-          <div className="all__cases__cards__right__entry">
-            <div className="all__cases__cards__right__entry__data">
-              <div className="all__cases__cards__right__entry__data__first">
-                <div className="all__cases__cards__right__entry__data__first__text">
-                  Metastaq
-                </div>
-                <div>'22</div>
-              </div>
-              <div className="all__cases__cards__right__entry__data__first">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-arrow-up-right"
-                >
-                  <line x1="7" y1="17" x2="17" y2="7"></line>
-                  <polyline points="7 7 17 7 17 17"></polyline>
-                </svg>
-              </div>
-            </div>
-            <div className="all__cases__cards__right__entry__data">
-              <div className="all__cases__cards__right__entry__data__bottom__text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Molestiae ut, quia incidunt perferendis voluptatum officia culpa
-                similique distinctio esse dolorem.
-              </div>
-            </div>
-            <div>ITERFACE & WEBSITE</div>
-          </div>
-          <div className="all__cases__cards__right__entry__card__contant">
-            <video
-              autoPlay
-              loop
-              muted
-              width="100%"
-              className="all__cases__cards__right__entry__card__video"
-            >
-              <source src={cardimg1} type="video/mp4"></source>
-            </video>
+          <div className="all__cases__cards__right__content">
+            <AllCasesCards active={false} />
+            <AllCasesCards active={true} />
+            <AllCasesCards active={false} />
+            <AllCasesCards active={true} />
+            <AllCasesCards active={false} />
+            <AllCasesCards active={true} />
           </div>
         </div>
       </div>
