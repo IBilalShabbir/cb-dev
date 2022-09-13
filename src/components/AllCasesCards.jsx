@@ -1,7 +1,14 @@
 import React from "react";
 import cardimg1 from "../video/cardimg1.mp4";
 
-export default function AllCasesCards({ active }) {
+export default function AllCasesCards({
+  active,
+  heading,
+  notification,
+  text,
+  bottomheading,
+  video,
+}) {
   return (
     <div
       className={
@@ -20,7 +27,7 @@ export default function AllCasesCards({ active }) {
         <div className="all__cases__cards__right__entry__data">
           <div className="all__cases__cards__right__entry__data__first">
             <div className="all__cases__cards__right__entry__data__first__text">
-              Metastaq <span>'22</span>
+              {heading} <span>{notification}</span>
             </div>
             <div className="all__cases__cards__right__entry__data__first">
               <svg
@@ -40,13 +47,13 @@ export default function AllCasesCards({ active }) {
               </svg>
             </div>
           </div>
-          <div className="all__cases__cards__right__entry__data__bottom__text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae
-            ut, quia incidunt perferendis voluptatum officia culpa similique
-            distinctio esse dolorem.
+          <div className="all__cases__cards__right__entry__data__middle__text">
+            {text}
           </div>
         </div>
-        <div>ITERFACE & WEBSITE</div>
+        <div className="all__cases__cards__right__entry__data__bottom__entry">
+          {bottomheading}
+        </div>
       </div>
       <div className="all__cases__cards__right__entry__card__contant">
         <video
@@ -56,7 +63,7 @@ export default function AllCasesCards({ active }) {
           width="100%"
           className="all__cases__cards__right__entry__card__video"
         >
-          <source src={cardimg1} type="video/mp4"></source>
+          <source src={video} type="video/mp4"></source>
         </video>
       </div>
     </div>
