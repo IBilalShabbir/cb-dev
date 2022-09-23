@@ -4,7 +4,7 @@ import { Fade } from "react-reveal";
 export default function AboutUsButton({ text }) {
   return (
     <>
-      <Fade left cascade>
+      <Fade left cascade distance="30%">
         <div className="more__about__us__section__left">
           <button>
             {text}

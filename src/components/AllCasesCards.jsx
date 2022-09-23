@@ -1,5 +1,4 @@
 import React from "react";
-import cardimg1 from "../video/cardimg1.mp4";
 
 export default function AllCasesCards({
   active,

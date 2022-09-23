@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import AnimatedText from "react-animated-text-content";
+import Fade from "react-reveal/Fade";
 export default function Banner() {
   const [show, setShow] = useState(true);
-  const array = ["to", "Crazy", "Biengs"];
+  const array = ["PRODUCTS", "DESIGN", "LOVE"];
   useEffect(() => {
     document.body.style.overflow = "hidden";
 
@@ -13,16 +14,15 @@ export default function Banner() {
   useEffect(() => {
     setTimeout(() => {
       setShow(show + 1 < array.length ? show + 1 : 0);
-    }, 1500);
+    }, 1700);
   }, [show]);
 
   return (
-    <div
-      className="banner"
-      style={{ animation: show === 2 ? "banner_animation 800ms" : "" }}
-    >
+    <div className="banner" style={{ animation: "banner_animation 0s" }}>
       <div className="banner__heading">
-        <div className="banner__top">Welcome</div>
+        <Fade bottom distance="200%" duration={2000}>
+          <div className="banner__top">We</div>
+        </Fade>
 
         <div className="banner__middle">
           {array
@@ -31,19 +31,21 @@ export default function Banner() {
               <AnimatedText
                 type="chars"
                 interval={0.1}
-                duration={0.7}
+                duration={0.5}
                 animationType="wave"
                 animation={{
                   x: "0px",
                   ease: "ease",
-                  scale: 3,
+                  scale: 1,
                 }}
               >
                 {item}
               </AnimatedText>
             ))}
         </div>
-        <div className="banner__bottom">Software House</div>
+        <Fade bottom distance="200%" duration={2000}>
+          <div className="banner__bottom">Products</div>
+        </Fade>
       </div>
     </div>
   );

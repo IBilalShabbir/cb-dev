@@ -3,6 +3,7 @@ import bg3 from "../video/bg3.mp4";
 import { Fade } from "react-reveal";
 import AboutUsButton from "../components/AboutUSButton";
 import AllCasesCards from "../components/AllCasesCards";
+import ScrollCards from "../components/ScrollCards";
 import cardimg1 from "../video/cardimg1.mp4";
 import card1 from "../video/card1.mp4";
 import card2 from "../video/card2.mp4";
@@ -10,6 +11,7 @@ import card3 from "../video/card3.mp4";
 
 export default function Home() {
   const [isBackToTop, setIsBackToTop] = useState(false);
+
   useEffect(() => {
     if (window.scrollY < 500) {
       setIsBackToTop(true);
@@ -92,8 +94,8 @@ export default function Home() {
           <div className="more__about__us__section__right">
             <div className="more__about__us__section__right__content">
               <span className="more__about__us__section__right__content__entry">
-                Agency{" "}
-              </span>{" "}
+                Agency
+              </span>
               <span className="more__about__us__section__right__content__entry__last">
                 We're a team of UX strategists, UI/UX, Product & Motion
               </span>
@@ -205,6 +207,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <ScrollCards />
     </div>
   );
 }
