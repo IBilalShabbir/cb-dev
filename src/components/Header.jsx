@@ -49,7 +49,7 @@ export default function Header() {
         {isNavOpen ? (
           <OutsideClickHandler
             onOutsideClick={() => {
-              if (window.innerWidth < 1100) {
+              if (window.innerWidth < 1000) {
                 setIsNavOpen(false);
               }
             }}
